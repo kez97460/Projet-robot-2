@@ -1,0 +1,5 @@
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 47 : call of function without prototype
+Warning[2103] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 89 : default startup code expects main function declared as 'void main (void)'
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 92 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 93 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 94 : call of function without prototype
