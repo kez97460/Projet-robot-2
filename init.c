@@ -117,15 +117,18 @@ void initSurvBattery()
 
 void initSerial()
 {
-    BAUDCONbits.BRG16 = 1; //permet de faire fonctionner le baud rate generator en 16bits
+    BAUDCONbits.BRG16 = 0; //permet de faire fonctionner le baud rate generator en 16bits
     TXSTAbits.BRGH = 1; //  On règle le high baud rate en mode high speed
     TXSTAbits.SYNC = 0; // on règle en mode asynchrone
-    SPBRGH = 0; // on initialise ce générateur à 0
-    SPBRG = 103; // 9615 baud au lieu de 9600
-    //TRISCbits.RC6 = 1; // mise de la pin en sortie TX, c'est par cette pin que ce fait la communication série
+    SPBRG = 51; // 9615 baud au lieu de 9600
+    // TRISCbits.RC6 = 1; // mise de la pin en sortie TX, c'est par cette pin que ce fait la communication série
     TRISCbits.TRISC6 = 0; // ??? 
     RCSTAbits.SPEN = 1; // initialisation de SPEN, ce bit permet d'autoriser le port de communication série
     TXSTAbits.TXEN = 1; // initialisation de TXEN, ce bit permet d'autoriser la transmission
+
+    PIR1bits.TXIF=0;
+    PIE1bits.TXIE=0;
+    RCSTAbits.CREN=1; //enables receiver
 
     printf("UART initialised");
 
