@@ -9,12 +9,20 @@
 extern "C" {
 #endif
 
-#define SPEED_MULTIPLIER 1.0 // speed constant multiplier
+#define SPEED_MULTIPLIER 1.0 // speed constant multiplier to make speed unit ?? 
+#define FORWARD_TIME_MULTIPLIER 100 // motorsCounter multiplier to make the distance unit ??
+#define ROTATION_TIME_MULTIPLIER 10 // motorsCounter multiplier to make the angle unit "degrees"
 
-volatile int motors_counter; // counts time for the motors
-volatile int test_counter; // counts time for ledtest, for testing
+extern volatile unsigned int motors_counter;
+extern volatile unsigned int test_counter;
+extern volatile unsigned char battery_value;
 
-volatile int battery_value; // battery value as an 8 bit integer
+extern volatile unsigned char use_survbat;
+extern volatile unsigned char use_interrupts;
+extern volatile unsigned char use_motors;
+extern volatile unsigned char use_timer0;
+extern volatile unsigned char use_usart;
+extern volatile unsigned char use_i2c;
 
 
 

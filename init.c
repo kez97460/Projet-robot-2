@@ -1,11 +1,20 @@
-/* Projet robot 2 | Kï¿½zia Marcou - Lï¿½am Lotte | 2023
- * Librairie init utilisï¿½e pour l'initialisation des fonctionnalitï¿½s du robot
- * La fonction resetTimer0 se trouve actuellement ici, peut ï¿½tre modifiï¿½ (interrupt ?)
+/* Projet robot 2 | Kézia Marcou - Lïam Lotte | 2023
+ * Librairie init utilisée pour l'initialisation des fonctionnalités du robot
+ * La fonction resetTimer0 se trouve actuellement ici, peut être modifié(interrupt ?)
  */
 
 #include "init.h"
+#include <stdio.h>
 
 volatile int timer0_reset; // valeur de reset de timer0
+
+volatile unsigned char use_survbat = 0;
+volatile unsigned char use_interrupts = 0;
+volatile unsigned char use_motors = 0;
+volatile unsigned char use_timer0 = 0;
+volatile unsigned char use_usart = 0;
+volatile unsigned char use_i2c = 0;
+
 
 // initialises Colck at Fosc = 8 MHz
 void initClock()
@@ -36,15 +45,18 @@ void initTimer0()
     // T0CONbits.T0PS = 0b0; // Prescaler to ...
     timer0_reset = 45535; // reset value (period adjustment)
     resetTimer0();
+
+    use_timer0 = 1;
 }
 
 // initialise PWM for both motors, frequency is 1kHz
-void initPWM()
+void initMotors()
 {
     /* Timer2 (T2CON register) : page 135 */
     T2CONbits.TMR2ON = 1; // timer2 ON
     T2CONbits.T2CKPS = 0b10; // prescaler = 16
     PR2 = 124; // reset value -> precise period adjustment for 1kHz
+
 
     /* PWM (CCP module) : page 141 */
     CCP1CONbits.CCP1M = 0b1100; // PWM mode for motor 1
@@ -54,26 +66,15 @@ void initPWM()
     CCP2CONbits.CCP2M = 0b1100; // PWM mode for motor 2
     CCPR2L = 0; // duty cycle 2 = 0
     CCP2CONbits.DC2B = 0;
-}
 
-// initialise EUSART with baud rate = 9600bauds
-void initUSART()
-{
-    /* USART : page 203 */
-    // Baud rate
-    BAUDCONbits.BRG16 = 1; // 16-bit baud rate -> activates SPBRGH
-    TXSTAbits.SYNC = 0; // mode synchrone
-    SPBRG = 103; // baud_rate = 9600 = Fosc/(4(n+1)) dans ces conditions (voir cours)
+    /* Peripherals */
+    TRISAbits.RA6 = 0; // RA6 = DIRD : output (Right motor direction)
+    TRISAbits.RA7 = 0; // RA7 = DIRG : output (Left motor direction)
 
-    // periph
-    TRISCbits.RC6 = 1; // TX = RC6 en entrï¿½e
+    TRISCbits.RC1 = 0; // RC1 = PWMD = CCP2 : output (Right motor PWM)
+    TRISCbits.RC2 = 0; // RC2 = PWMG = CCP1 : output (Left motor PWM)
 
-    // interrupts
-    PIR1bits.TXIF = 0; // force interrupt off
-
-    // other
-    RCSTAbits.SPEN = 1; // serial port enabled
-    TXSTAbits.TXEN = 1; // transmission enabled
+    use_motors = 1;
 }
 
 void initInterrupts()
@@ -89,17 +90,67 @@ void initInterrupts()
     //general interrupts
     INTCONbits.PEIE = 1; // enable peripheral interrupts
     INTCONbits.GIE = 1; // enable interrupts globally
+
+    use_interrupts = 1;
 }
 
-// Initialise the battery surveillance system
-void initSurvBat()
+void initSurvBattery()
 {
-    
+    TRISBbits.RB5 = 0;
+
+    ADCON1bits.VCFG0 = 0; //Set the voltage references
+    ADCON1bits.VCFG1 = 0;
+
+    ADCON1bits.PCFG = 0b1100; // Entrées AN0-AN2 en analog
+    ADCON0bits.CHS = 0b0010; // Entrée de l'ADC : AN2
+    ADCON2bits.ADCS = 0b100; // Tad = Fosc/4 = 1 us
+    ADCON2bits.ACQT = 0b011; // Tacq = 6 * Tad
+
+    ADCON2bits.ADFM = 1; //Justify the result to the right
+
+    ADCON0bits.ADON = 1; //start the ADC
+
+    ADCON0bits.GO = 1; // Start a measure
+
+    use_survbat = 1;
+}
+
+void initSerial()
+{
+    BAUDCONbits.BRG16 = 1; //permet de faire fonctionner le baud rate generator en 16bits
+    TXSTAbits.BRGH = 1; //  On règle le high baud rate en mode high speed
+    TXSTAbits.SYNC = 0; // on règle en mode asynchrone
+    SPBRGH = 0; // on initialise ce générateur à 0
+    SPBRG = 103; // 9615 baud au lieu de 9600
+    //TRISCbits.RC6 = 1; // mise de la pin en sortie TX, c'est par cette pin que ce fait la communication série
+    TRISCbits.TRISC6 = 0; // ??? 
+    RCSTAbits.SPEN = 1; // initialisation de SPEN, ce bit permet d'autoriser le port de communication série
+    TXSTAbits.TXEN = 1; // initialisation de TXEN, ce bit permet d'autoriser la transmission
+
+    printf("UART initialised");
+
+    use_usart = 1;
+}
+
+void initI2c()
+{
+    /*SCL et SDA en entrée*/
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
+    /*Validation I2C*/
+    SSPCON1bits.SSPEN = 1;
+    /*MSSP en mode maitre*/
+    SSPCON1bits.SSPM=8;
+    /*Control Slew Rate*/
+    SSPSTATbits.SMP = 1;
+    /*Vitesse 100kb/s*/
+    SSPADD = 9; // SSPADD = (Fosc/4*Bauderate)-1
+
+    use_i2c = 1;
 }
 
 // Full initialisation of the robot
-char initRobotFull()
+/*char initRobotFull()
 {
     // Capteurs IR off
-
-}
+}*/

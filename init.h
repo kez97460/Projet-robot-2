@@ -11,6 +11,7 @@ extern "C" {
 #endif
 
 #include <p18f2520.h>
+#include <stdio.h>
 #include "MI2C.h"
 #include "extern.h"
 
@@ -19,10 +20,10 @@ void resetTimer0();
 
 void initClock();
 void initTimer0();
-void initPWM();
-void initUSART();
+void initMotors();
+void initSerial();
 void initInterrupts();
-void initSurvBat();
+void initSurvBattery();
 char initRobotFull();
 
 

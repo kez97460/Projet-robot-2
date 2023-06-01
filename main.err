@@ -1,5 +1,10 @@
-Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 47 : call of function without prototype
-Warning[2103] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 89 : default startup code expects main function declared as 'void main (void)'
-Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 92 : call of function without prototype
-Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 93 : call of function without prototype
-Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 94 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 74 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 88 : call of function without prototype
+Warning[2066] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 97 : type qualifier mismatch in assignment
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 134 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 135 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 136 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 137 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 138 : call of function without prototype
+Warning[2058] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 139 : call of function without prototype
+Warning[2066] D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c 144 : type qualifier mismatch in assignment
