@@ -41,8 +41,8 @@ void motorsSetSpeed(int speed/*unit ?*/)
         duty_cycle_percent = 50;
 
     /* With our settings : Duty cycle 100% -> Duty value PR2 : proportionnality (approximated) */
-    setDutyCycle(1, duty_cycle_percent * PR2 / 100); // Left motor
-    setDutyCycle(2, duty_cycle_percent * PR2 / 100); // Right motor
+    setDutyCycle(1, duty_cycle_percent * DC_ONE_PERCENT); // Left motor
+    setDutyCycle(2, duty_cycle_percent * DC_ONE_PERCENT); // Right motor
 }
 
 void motorsTest(int duty_cycle_percent, int timer, int dir_left, int dir_right)
@@ -51,8 +51,8 @@ void motorsTest(int duty_cycle_percent, int timer, int dir_left, int dir_right)
     PORTAbits.RA7 = dir_left; // Left motor Direction : ???
 
     motors_counter = timer;
-    setDutyCycle(1, duty_cycle_percent * PR2 / 100); // Left motor
-    setDutyCycle(2, duty_cycle_percent * PR2 / 100); // Right motor
+    setDutyCycle(1, duty_cycle_percent * DC_ONE_PERCENT); // Left motor
+    setDutyCycle(2, duty_cycle_percent * DC_ONE_PERCENT); // Right motor
 }
 
 void motorsForward(int max_distance, int speed/*unit ?*/)

@@ -13,7 +13,7 @@
 #pragma config OSC = INTIO67
 #pragma config PBADEN = OFF, WDT = OFF, LVP = OFF, DEBUG = ON
 
-volatile short start; // is the program started ?
+volatile short start = 0; // is the program started ?
 
 // volatile unsigned int sonar_counter = 0; // counts time for the sonar
 volatile unsigned int test_counter = 0; // counts time for ledtest, for testing. From extern.h
@@ -22,18 +22,18 @@ volatile unsigned int survbat_counter = 0;
 
 volatile unsigned int motors_counter = 0; // counts time for the motors. From extern.h
 
-volatile unsigned int distance_sonar;
-volatile unsigned int safety_sonar;
+volatile unsigned int distance_sonar = 0;
+volatile unsigned int safety_sonar = 0;
 
-volatile unsigned char battery_measures_done; // counts time for battery measurements
-volatile unsigned char battery_measures[4]; // stores measurements
-volatile unsigned char battery_value = 0; // mean of 4 battery measurements. From extern.h
-volatile unsigned char UBAT; // single battery measurement
+volatile unsigned int battery_measures_done = 0; // counts time for battery measurements
+volatile unsigned int battery_measures[4]; // stores measurements
+volatile unsigned int battery_value = 0; // mean of 4 battery measurements. From extern.h
+volatile unsigned int UBAT = 0; // single battery measurement
 
 void HighISR(void);
 void sleep(float time_s);
 unsigned int sonarMeasure();
-unsigned char survBattery();
+unsigned int survBattery();
 
 // Interrupt
 #pragma code HighVector=0x08 // On va au vecteur d'interruption
@@ -52,7 +52,8 @@ void HighISR(void)
     if(INTCONbits.INT0IF)
     {
         INTCONbits.INT0IF = 0; // flag off
-        start = 1;
+        start++;
+        Write_PCF8574(0x40, 256 - start);
     }
     // End of Int0
     
@@ -79,14 +80,14 @@ void HighISR(void)
         // Battery measurements and surveillance
         if(use_survbat && !survbat_counter)
         {
-            survbat_counter = 50 ; // mesure toutes les 500ms
+            survbat_counter = 25 ; // mesure toutes les 250ms
             if(battery_measures_done == 4)
             {
                 battery_value = (battery_measures[0] + battery_measures[1] + battery_measures[2] + battery_measures[3]) / 4;
                 battery_measures_done = 0;
                 // printf("Battery level : %d \n", battery_value);
                 // Turn led off if battery under 10V
-                if(battery_value < 159)
+                if(battery_value < BATTERY_VALUE_LIMIT)
                     PORTBbits.RB5 = 1;
                 else
                     PORTBbits.RB5 = 0;
@@ -123,15 +124,15 @@ void HighISR(void)
 void main(void)
 {
     /* Inits and setup */
-    unsigned int distance; // for testing purposes
 
     initClock();
     initTimer0();
-    initInterrupts();
     initMotors();
     initSurvBattery();
     initSerial();
     initI2c();
+
+    initInterrupts(); // Always last
     
 
     sleep(1); // Stop for a bit because why not
@@ -141,32 +142,31 @@ void main(void)
     printf("Feur \r\n");
     PORTBbits.RB5 = 1;
     */
-
+    while(!start);
     // Tests moteurs
-    /*
-    motorsTest(50, 50, 1, 1); // speed, time(10*ms), dir_left, dir_right
-    while(motors_counter);
-    motorsTest(50, 50, 0, 0); // speed, time(10*ms), dir_left, dir_right
-    while(motors_counter);
-    */
     
+    motorsTest(20, 5000, 1, 1); // pwm(%), time(10*ms), dir_left, dir_right
+    while(motors_counter);
+    motorsTest(20, 5000, 0, 0); // pwm(%), time(10*ms), dir_left, dir_right
+    while(motors_counter);
+    
+    
+    printf("Feur \r\n");
 
     // Test leds
-    /*
-    Write_PCF8574(0x40, 0b01010111); // 1 : off and 0 : on (for all 8 leds).
-    */
+    // Write_PCF8574(0x40, 0b01010111); // 1 : off and 0 : on (for all 8 leds).
 
     // Actual used code
     /*
     while(!start); // wait for remote control
 
-    motorsForward(200, 25); // Go forward for an indefinite amount of time
+    motorsForward(9999, 25); // Go forward for an indefinite amount of time
 
-    safety_sonar = 3; // nb of consecutive measures needed to stop
+    safety_sonar = NB_CONSECUTIVE_MEASURES; // nb of consecutive measures needed to stop
     while(motors_counter)
     {
         distance = sonarMeasure();
-        if(distance < 30) // this while loop could be replaced by measurements in Timer0 interrupt
+        if(distance < MAX_DISTANCE_OBSTACLE) // this while loop could be replaced by measurements in Timer0 interrupt
         {
             safety_sonar--;
             if(!safety_sonar)
@@ -177,7 +177,7 @@ void main(void)
             }
         }
         else
-            safety_sonar = 3;
+            safety_sonar = NB_CONSECUTIVE_MEASURES;
     }
     if(use_usart)
         printf("Stopping motors \r\n");
@@ -190,10 +190,9 @@ void main(void)
     motorsForward(200, 25); // Calibration needed for ~1m
     while(motors_counter); // On attend la fin du déplacement
     sleep(0.5);
-    */
 
     printf("Routine finished, going into loop \r\n");
-
+    */
     /* Infinite loop */
     while("Feur")
     {
@@ -223,14 +222,14 @@ unsigned int sonarMeasure()
     return distance;
 }
 
-unsigned char survBattery()
+unsigned int survBattery()
 {
-    unsigned char UBAT;
+    unsigned int UBAT;
 
     // ADCON0bits.ADON = 1; //start the ADC
 
-    ADCON0bits.GO = 1; //start acquisition
-    while ( !ADCON0bits.DONE ); //wait that the acquisition is finished
+    ADCON0bits.GO = 1; // start acquisition
+    while ( !ADCON0bits.DONE ); // wait that the acquisition is finished
     UBAT = 256 * ADRESH + ADRESL; //read the ADC acquisition
 
     // ADCON0bits.ADON = 0; //stop the ADC

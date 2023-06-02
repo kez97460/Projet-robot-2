@@ -117,6 +117,8 @@ void initSurvBattery()
     ADCON0bits.GO = 1; // Start a measure
     */
 
+    TRISBbits.RB5 = 0;
+
     ADCON1bits.VCFG0 = 0; // Vref+ = Vdd
     ADCON1bits.VCFG1 = 0; // Vref- = Vss
     ADCON1bits.PCFG = 0b1100; // Entrées AN0-AN2 en analog
