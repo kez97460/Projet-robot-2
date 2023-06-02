@@ -10,7 +10,7 @@ extern "C" {
 #endif
 
 #define SPEED_MULTIPLIER 1.0 // speed constant multiplier to make speed unit ?? 
-#define FORWARD_TIME_MULTIPLIER 100 // motorsCounter multiplier to make the distance unit ??
+#define FORWARD_TIME_MULTIPLIER 10 // motorsCounter multiplier to make the distance unit ??
 #define ROTATION_TIME_MULTIPLIER 10 // motorsCounter multiplier to make the angle unit "degrees"
 
 extern volatile unsigned int motors_counter;

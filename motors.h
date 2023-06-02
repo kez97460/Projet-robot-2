@@ -10,6 +10,7 @@ extern "C" {
 
 #include <p18f2520.h>
 #include "extern.h"
+#include <stdio.h>
 
 void motorsStop();
 void motorsForward(int max_distance, int speed/*unit ?*/);

@@ -96,22 +96,36 @@ void initInterrupts()
 
 void initSurvBattery()
 {
-    TRISBbits.RB5 = 0;
+    /*
+    ADCON1bits.VCFG=0; // inutile configuration par defaut
+    //Choix TAD/
+    ADCON2bits.ADCS=4;
+    //T acquisition/
+    ADCON2bits.ACQT=2;  // Temps acq = 6us > 4.2us
+    // Choix AN2
+    ADCON0bits.CHS=2;
+    // Justification à droite
+    ADCON2bits.ADFM = 1;
+    // Validation ADC (demarage peripherique)
+    ADCON0bits.ADON=1;
+    //Configuration des voies analogiques et digitles
+    ADCON1bits.PCFG=12;//AN0, AN1, AN2 analog, reste digital
 
-    ADCON1bits.VCFG0 = 0; //Set the voltage references
-    ADCON1bits.VCFG1 = 0;
-
-    ADCON1bits.PCFG = 0b1100; // Entrées AN0-AN2 en analog
-    ADCON0bits.CHS = 0b0010; // Entrée de l'ADC : AN2
-    ADCON2bits.ADCS = 0b100; // Tad = Fosc/4 = 1 us
-    ADCON2bits.ACQT = 0b011; // Tacq = 6 * Tad
-
-    ADCON2bits.ADFM = 1; //Justify the result to the right
-
-    ADCON0bits.ADON = 1; //start the ADC
+    TRISAbits.RA2=1;
+    TRISBbits.RB5=0;
 
     ADCON0bits.GO = 1; // Start a measure
+    */
 
+    ADCON1bits.VCFG0 = 0; // Vref+ = Vdd
+    ADCON1bits.VCFG1 = 0; // Vref- = Vss
+    ADCON1bits.PCFG = 0b1100; // Entrées AN0-AN2 en analog
+    ADCON0bits.CHS = 0b0010; // Entrée de l'ADC : AN2
+    ADCON2bits.ADCS = 0b100;
+    ADCON2bits.ACQT = 0b010; // Temps acq = 6us > 4.2us
+    ADCON2bits.ADFM = 1; // right justified
+    ADCON0bits.ADON = 1; // ADC ON
+    
     use_survbat = 1;
 }
 
@@ -126,28 +140,34 @@ void initSerial()
     RCSTAbits.SPEN = 1; // initialisation de SPEN, ce bit permet d'autoriser le port de communication série
     TXSTAbits.TXEN = 1; // initialisation de TXEN, ce bit permet d'autoriser la transmission
 
-    PIR1bits.TXIF=0;
-    PIE1bits.TXIE=0;
-    RCSTAbits.CREN=1; //enables receiver
+    PIR1bits.TXIF = 0;
+    PIE1bits.TXIE = 0;
+    RCSTAbits.CREN = 1; //enables receiver
 
-    printf("UART initialised");
+    printf("UART initialised \r\n");
 
     use_usart = 1;
 }
 
 void initI2c()
 {
-    /*SCL et SDA en entrée*/
+    // SCL et SDA en entrée
     TRISCbits.TRISC3 = 1;
     TRISCbits.TRISC4 = 1;
-    /*Validation I2C*/
-    SSPCON1bits.SSPEN = 1;
-    /*MSSP en mode maitre*/
-    SSPCON1bits.SSPM=8;
-    /*Control Slew Rate*/
-    SSPSTATbits.SMP = 1;
-    /*Vitesse 100kb/s*/
-    SSPADD = 9; // SSPADD = (Fosc/4*Bauderate)-1
+    // Validation I2C
+    // SSPCON1bits.SSPEN = 1;
+    // MSSP en mode maitre
+    // SSPCON1bits.SSPM=8;
+    // Control Slew Rate
+    // SSPSTATbits.SMP = 1;
+    // Vitesse 100kb/s
+    // SSPADD = 9; // SSPADD = (Fosc/4*Baudrate)-1
+
+    // Copied from MI2C.c
+    SSPSTAT = 0x80; // Slew rate 100KHz
+    SSPCON1 = 0x28; // Master Mode Enable, Sclock = FOSC/(4 * (SSPADD + 1)) I2C bus,
+    SSPCON2 = 0x00;
+    SSPADD = 0x13; // Prediviseur pour SCL = 100KHz a 8MHz
 
     use_i2c = 1;
 }

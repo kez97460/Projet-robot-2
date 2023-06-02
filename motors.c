@@ -35,7 +35,7 @@ void setDutyCycle(int motor, int duty_value)
 void motorsSetSpeed(int speed/*unit ?*/)
 {
     // Calculate duty cycle, divide by current battery level to try to adapt and keep a constant speed
-    duty_cycle_percent = SPEED_MULTIPLIER * speed / battery_value; // should be less than 100
+    duty_cycle_percent = SPEED_MULTIPLIER * speed; /* / battery_value */ // should be less than 100
 
     if(duty_cycle_percent > 50) // Limit duty cycle to 50% (6V motors on 12V battery)
         duty_cycle_percent = 50;
@@ -62,6 +62,9 @@ void motorsForward(int max_distance, int speed/*unit ?*/)
 
     motors_counter = FORWARD_TIME_MULTIPLIER * max_distance / speed;
     motorsSetSpeed(speed);
+
+    if(use_usart)
+        printf("Going forward \r\n");
 }
 
 void motorsTurnLeft(int angle, int speed)
@@ -69,8 +72,11 @@ void motorsTurnLeft(int angle, int speed)
     PORTAbits.RA6 = 1; // Right motor Direction : ???
     PORTAbits.RA7 = 0; // Left motor Direction : ???
 
-    motors_counter = ROTATION_TIME_MULTIPLIER * angle / speed;
+    motors_counter = (int) ROTATION_TIME_MULTIPLIER * angle / speed;
     motorsSetSpeed(speed);
+
+    if(use_usart)
+        printf("Turning left \r\n");
 }
 
 void motorsTurnRight(int angle, int speed)
@@ -78,7 +84,10 @@ void motorsTurnRight(int angle, int speed)
     PORTAbits.RA6 = 0; // Right motor Direction : ???
     PORTAbits.RA7 = 1; // Left motor Direction : ???
 
-    motors_counter = ROTATION_TIME_MULTIPLIER * angle / speed;
+    motors_counter = (int) ROTATION_TIME_MULTIPLIER * angle / speed;
     motorsSetSpeed(speed);
+
+    if(use_usart)
+        printf("Turning right \r\n");
 }
 
