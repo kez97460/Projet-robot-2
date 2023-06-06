@@ -16,11 +16,11 @@
 volatile short start = 0; // is the program started ?
 
 // volatile unsigned int sonar_counter = 0; // counts time for the sonar
-volatile unsigned int test_counter = 0; // counts time for ledtest, for testing. From extern.h
-volatile unsigned int sleep_counter = 0;
+volatile unsigned long test_counter = 0; // counts time for ledtest, for testing. From extern.h
+volatile unsigned long sleep_counter = 0;
 volatile unsigned int survbat_counter = 0;
 
-volatile unsigned int motors_counter = 0; // counts time for the motors. From extern.h
+volatile unsigned long motors_counter = 0; // counts time for the motors. From extern.h
 
 // volatile unsigned int distance_sonar = 0;
 // volatile unsigned int safety_sonar = 0;
@@ -34,6 +34,7 @@ void HighISR(void);
 void sleep(float time_s);
 unsigned int sonarMeasure();
 unsigned int survBattery();
+void waitForSonarMeasure(int type/* MIN or MAX*/, int limit);
 
 // Interrupt
 #pragma code HighVector=0x08 // On va au vecteur d'interruption
@@ -124,13 +125,11 @@ void HighISR(void)
 void main(void)
 {
     /* Inits and setup */
-    int safety_sonar;
-    int distance;
-    int why;
 
     sleep_counter = 0;
     survbat_counter = 0;
     battery_measures_done = 0;
+    motors_counter = 0;
 
     initClock();
     initTimer0();
@@ -141,11 +140,15 @@ void main(void)
 
     initInterrupts(); // Always last
 
-    start = 0;
-    while(!start); // wait for remote control
+    
 
-    if(use_usart)
-        printf("Battery level : %d \r\n", battery_value); // Can't hurt to know
+    start = 0;
+    while(!start) // wait for remote control
+    {
+        if(use_usart)
+            printf("Battery level : %d \r\n", battery_value); // Can't hurt to know
+        sleep(0.5);
+    }
 
     // Tests moteurs
     /*
@@ -178,7 +181,9 @@ void main(void)
     // Actual used code
 
     // Wait for no obstacle(1.5m)
-    safety_sonar = NB_CONSECUTIVE_MEASURES;
+    waitForSonarMeasure(MIN, 150);
+
+    /*safety_sonar = NB_CONSECUTIVE_MEASURES;
     while(safety_sonar)
     {
         distance = sonarMeasure();
@@ -189,18 +194,23 @@ void main(void)
         if(use_usart)
             printf("Measure : %d, target : MIN 150 \r\n", distance);
     }
+    */
 
-    motorsForward(9999, 30); // Go forward for a very long amount of time
+    motorsForward(-1, 30); // Go forward FOREVER
 
+    waitForSonarMeasure(MAX, 45); // 40cm but I added a buffer to account for the sonar
+    /*
     safety_sonar = NB_CONSECUTIVE_MEASURES; // nb of consecutive measures needed to stop
     while(motors_counter && safety_sonar)
     {
         distance = sonarMeasure();
         why = 40;
         if(distance <= why)
+        {
             safety_sonar--;
             if(use_usart) // Debug print
                 printf("Measure : %d, target : MAX %d , DECREASING SAFETY COUNTER \r\n", distance, why);
+        }
         else
         {
             safety_sonar = NB_CONSECUTIVE_MEASURES;
@@ -208,6 +218,7 @@ void main(void)
                 printf("Measure : %d, target : MAX %d \r\n", distance, why);
         }
     }
+    */
     if(use_usart)
         printf("Stopping motors \r\n");
     motorsStop();
@@ -266,4 +277,29 @@ unsigned int survBattery()
     // ADCON0bits.ADON = 0; //stop the ADC
 
     return UBAT;
+}
+
+// Stay inside a loop until motors stop or sonar measure respects condition
+void waitForSonarMeasure(int type/* MIN or MAX*/, int limit)
+{
+    int distance;
+    char safety_sonar = NB_CONSECUTIVE_MEASURES; // nb of consecutive measures needed to stop
+    while(safety_sonar)
+    {
+        distance = sonarMeasure();
+        if(type * distance <= type * limit)
+        {
+            safety_sonar--;
+            if(use_usart) // Debug print
+                printf("Measure : %d, target : %d , DECREASING SAFETY COUNTER \r\n", distance, limit);
+        }
+        else
+        {
+            safety_sonar = NB_CONSECUTIVE_MEASURES;
+            if(use_usart) // Debug print
+                printf("Measure : %d, target : %d \r\n", distance, limit);
+        }
+        if(use_usart) // Debug print
+            printf("Time until motors off : %ld ms \r\n \r\n", motors_counter * 10);
+    }
 }

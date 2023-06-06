@@ -55,12 +55,13 @@ void motorsTest(int duty_cycle_percent, int timer, int dir_left, int dir_right)
     setDutyCycle(2, duty_cycle_percent * DC_ONE_PERCENT); // Right motor
 }
 
-void motorsForward(int max_distance, int speed/*unit ?*/)
+// inputting a negative distance will make it go forward forever
+void motorsForward(int distance, int speed/*unit ?*/)
 {
     PORTAbits.RA6 = 0; // Right motor Direction : ???
     PORTAbits.RA7 = 0; // Left motor Direction : ???
 
-    motors_counter = FORWARD_TIME_MULTIPLIER * max_distance / speed;
+    motors_counter = FORWARD_TIME_MULTIPLIER * distance / speed;
     motorsSetSpeed(speed);
 
     if(use_usart)
@@ -72,7 +73,7 @@ void motorsTurnLeft(int angle, int speed)
     PORTAbits.RA6 = 0; // Right motor Direction : ???
     PORTAbits.RA7 = 1; // Left motor Direction : ???
 
-    motors_counter = (int) ROTATION_TIME_MULTIPLIER * angle / speed;
+    motors_counter = (long) ROTATION_TIME_MULTIPLIER * angle / speed;
     motorsSetSpeed(speed);
 
     if(use_usart)
@@ -84,7 +85,7 @@ void motorsTurnRight(int angle, int speed)
     PORTAbits.RA6 = 1; // Right motor Direction : ???
     PORTAbits.RA7 = 0; // Left motor Direction : ???
 
-    motors_counter = (int) ROTATION_TIME_MULTIPLIER * angle / speed;
+    motors_counter = (long) ROTATION_TIME_MULTIPLIER * angle / speed;
     motorsSetSpeed(speed);
 
     if(use_usart)

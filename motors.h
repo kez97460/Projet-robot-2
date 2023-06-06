@@ -13,10 +13,14 @@ extern "C" {
 #include <stdio.h>
 
 void motorsStop();
-void motorsForward(int max_distance, int speed/*unit ?*/);
+
+// inputting a negative distance will make it go forward forever
+void motorsForward(int distance, int speed/*unit ?*/);
+
 void motorsTurnLeft(int angle, int speed);
 void motorsTurnRight(int angle, int speed);
 
+// For testing only
 void motorsTest(int speed, int timer, int dir_left, int dir_right);
 
 

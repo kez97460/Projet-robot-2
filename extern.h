@@ -25,8 +25,8 @@ extern "C" {
 #define MIN -1
 #define MAX 1
 
-extern volatile unsigned int motors_counter;
-extern volatile unsigned int test_counter;
+extern volatile unsigned long motors_counter;
+extern volatile unsigned long test_counter;
 extern volatile unsigned int battery_value;
 
 extern volatile unsigned char use_survbat;
