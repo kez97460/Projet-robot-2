@@ -4,7 +4,6 @@
  */
 
 #include "init.h"
-#include <stdio.h>
 
 volatile int timer0_reset; // valeur de reset de timer0
 
@@ -74,6 +73,8 @@ void initMotors()
     TRISCbits.RC1 = 0; // RC1 = PWMD = CCP2 : output (Right motor PWM)
     TRISCbits.RC2 = 0; // RC2 = PWMG = CCP1 : output (Left motor PWM)
 
+    motors_counter = 0;
+
     use_motors = 1;
 }
 
@@ -128,6 +129,7 @@ void initSurvBattery()
     ADCON2bits.ADFM = 1; // right justified
     ADCON0bits.ADON = 1; // ADC ON
     
+    battery_value = 0;
     use_survbat = 1;
 }
 
@@ -170,6 +172,8 @@ void initI2c()
     SSPCON1 = 0x28; // Master Mode Enable, Sclock = FOSC/(4 * (SSPADD + 1)) I2C bus,
     SSPCON2 = 0x00;
     SSPADD = 0x13; // Prediviseur pour SCL = 100KHz a 8MHz
+
+    Write_PCF8574(0x40, 255); // ALL leds off
 
     use_i2c = 1;
 }

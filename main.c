@@ -22,8 +22,8 @@ volatile unsigned int survbat_counter = 0;
 
 volatile unsigned int motors_counter = 0; // counts time for the motors. From extern.h
 
-volatile unsigned int distance_sonar = 0;
-volatile unsigned int safety_sonar = 0;
+// volatile unsigned int distance_sonar = 0;
+// volatile unsigned int safety_sonar = 0;
 
 volatile unsigned int battery_measures_done = 0; // counts time for battery measurements
 volatile unsigned int battery_measures[4]; // stores measurements
@@ -53,7 +53,7 @@ void HighISR(void)
     {
         INTCONbits.INT0IF = 0; // flag off
         start++;
-        Write_PCF8574(0x40, 256 - start);
+        Write_PCF8574(0x40, 0); // ALL leds on
     }
     // End of Int0
     
@@ -124,6 +124,13 @@ void HighISR(void)
 void main(void)
 {
     /* Inits and setup */
+    int safety_sonar;
+    int distance;
+    int why;
+
+    sleep_counter = 0;
+    survbat_counter = 0;
+    battery_measures_done = 0;
 
     initClock();
     initTimer0();
@@ -133,66 +140,87 @@ void main(void)
     initI2c();
 
     initInterrupts(); // Always last
-    
 
-    sleep(1); // Stop for a bit because why not
+    start = 0;
+    while(!start); // wait for remote control
 
-    // Test uart
-    /*
-    printf("Feur \r\n");
-    PORTBbits.RB5 = 1;
-    */
-    while(!start);
+    if(use_usart)
+        printf("Battery level : %d \r\n", battery_value); // Can't hurt to know
+
     // Tests moteurs
-    
-    motorsTest(20, 5000, 1, 1); // pwm(%), time(10*ms), dir_left, dir_right
+    /*
+    motorsTest(20, 500, 1, 1); // pwm(%), time(10*ms), dir_left, dir_right
     while(motors_counter);
-    motorsTest(20, 5000, 0, 0); // pwm(%), time(10*ms), dir_left, dir_right
+    motorsTest(20, 500, 0, 0); // pwm(%), time(10*ms), dir_left, dir_right
     while(motors_counter);
-    
-    
-    printf("Feur \r\n");
+    */
 
     // Test leds
     // Write_PCF8574(0x40, 0b01010111); // 1 : off and 0 : on (for all 8 leds).
 
+    // Calibration
+    // motorsForward(100, 30);
+    // while(motors_counter); // On attend la fin du déplacement
+    // sleep(2);
+
+    // motorsTurnRight(90, 20); // Calibration needed for ~90°
+    //while(motors_counter); // On attend la fin du déplacement
+    //sleep(0.5);
+
+    //motorsTurnRight(90, 20); // Calibration needed for ~90°
+    //while(motors_counter); // On attend la fin du déplacement
+    //sleep(2);
+
+    // motorsForward(100, 30);
+    // while(motors_counter); // On attend la fin du déplacement
+    // sleep(0.5);
+
     // Actual used code
-    /*
-    while(!start); // wait for remote control
 
-    motorsForward(9999, 25); // Go forward for an indefinite amount of time
-
-    safety_sonar = NB_CONSECUTIVE_MEASURES; // nb of consecutive measures needed to stop
-    while(motors_counter)
+    // Wait for no obstacle(1.5m)
+    safety_sonar = NB_CONSECUTIVE_MEASURES;
+    while(safety_sonar)
     {
         distance = sonarMeasure();
-        if(distance < MAX_DISTANCE_OBSTACLE) // this while loop could be replaced by measurements in Timer0 interrupt
-        {
+        if(distance > 150)
             safety_sonar--;
-            if(!safety_sonar)
-            {
-                motorsStop();
-                if(use_usart)
-                    printf("Obstacle detected \r\n");
-            }
-        }
         else
             safety_sonar = NB_CONSECUTIVE_MEASURES;
+        if(use_usart)
+            printf("Measure : %d, target : MIN 150 \r\n", distance);
+    }
+
+    motorsForward(9999, 30); // Go forward for a very long amount of time
+
+    safety_sonar = NB_CONSECUTIVE_MEASURES; // nb of consecutive measures needed to stop
+    while(motors_counter && safety_sonar)
+    {
+        distance = sonarMeasure();
+        why = 40;
+        if(distance <= why)
+            safety_sonar--;
+            if(use_usart) // Debug print
+                printf("Measure : %d, target : MAX %d , DECREASING SAFETY COUNTER \r\n", distance, why);
+        else
+        {
+            safety_sonar = NB_CONSECUTIVE_MEASURES;
+            if(use_usart) // Debug print
+                printf("Measure : %d, target : MAX %d \r\n", distance, why);
+        }
     }
     if(use_usart)
         printf("Stopping motors \r\n");
+    motorsStop();
     sleep(0.5);
 
-    motorsTurnLeft(200, 25);
+    motorsTurnRight(90, 20); // Calibration needed for ~90°
     while(motors_counter); // On attend la fin du déplacement
     sleep(0.5);
 
-    motorsForward(200, 25); // Calibration needed for ~1m
+    motorsForward(100, 30); // Calibration needed for ~1m
     while(motors_counter); // On attend la fin du déplacement
     sleep(0.5);
-
     printf("Routine finished, going into loop \r\n");
-    */
     /* Infinite loop */
     while("Feur")
     {
@@ -205,6 +233,8 @@ void main(void)
         }
     }
 }
+
+/* Functions */
 
 void sleep(float time_s)
 {
@@ -219,6 +249,7 @@ unsigned int sonarMeasure()
     SONAR_Write(0xE0,0x51);
     sleep(0.080); // Attente pour le write >72ms
     distance = SONAR_Read(0xE0,0x02);
+    distance = (unsigned int) distance * SONAR_DISTANCE_MULTIPLIER;
     return distance;
 }
 

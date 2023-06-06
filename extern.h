@@ -10,15 +10,20 @@ extern "C" {
 #endif
 
 #define SPEED_MULTIPLIER 1.0 // speed constant multiplier to make speed unit ?? 
-#define FORWARD_TIME_MULTIPLIER 10 // motorsCounter multiplier to make the distance unit ??
-#define ROTATION_TIME_MULTIPLIER 10 // motorsCounter multiplier to make the angle unit "degrees"
+#define FORWARD_TIME_MULTIPLIER 120 // motorsCounter multiplier to make the distance unit ??
+#define ROTATION_TIME_MULTIPLIER 56 // motorsCounter multiplier to make the angle unit "degrees"
 
 #define DC_ONE_PERCENT 5
 
 #define BATTERY_VALUE_LIMIT 639
 
+#define SONAR_DISTANCE_MULTIPLIER 1
 #define MAX_DISTANCE_OBSTACLE 40
-#define NB_CONSECUTIVE_MEASURES 2
+#define NB_CONSECUTIVE_MEASURES 3
+
+// For waitUntilSonarMeasure in main.c
+#define MIN -1
+#define MAX 1
 
 extern volatile unsigned int motors_counter;
 extern volatile unsigned int test_counter;

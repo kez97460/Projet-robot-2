@@ -145,11 +145,6 @@
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="5.0"/>
       </PICkit3PlatformTool>
-      <VSMViewerPlatformTool>
-        <property key="design.file" value="../ROBOT2_SIMU.pdsprj"/>
-        <property key="target.ip.address" value="localhost"/>
-        <property key="target.ip.port" value="8001"/>
-      </VSMViewerPlatformTool>
       <item path="i2c.c" ex="true" overriding="false">
         <C18>
         </C18>

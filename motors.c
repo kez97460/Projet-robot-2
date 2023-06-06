@@ -57,8 +57,8 @@ void motorsTest(int duty_cycle_percent, int timer, int dir_left, int dir_right)
 
 void motorsForward(int max_distance, int speed/*unit ?*/)
 {
-    PORTAbits.RA6 = 1; // Right motor Direction : ???
-    PORTAbits.RA7 = 1; // Left motor Direction : ???
+    PORTAbits.RA6 = 0; // Right motor Direction : ???
+    PORTAbits.RA7 = 0; // Left motor Direction : ???
 
     motors_counter = FORWARD_TIME_MULTIPLIER * max_distance / speed;
     motorsSetSpeed(speed);
@@ -69,8 +69,8 @@ void motorsForward(int max_distance, int speed/*unit ?*/)
 
 void motorsTurnLeft(int angle, int speed)
 {
-    PORTAbits.RA6 = 1; // Right motor Direction : ???
-    PORTAbits.RA7 = 0; // Left motor Direction : ???
+    PORTAbits.RA6 = 0; // Right motor Direction : ???
+    PORTAbits.RA7 = 1; // Left motor Direction : ???
 
     motors_counter = (int) ROTATION_TIME_MULTIPLIER * angle / speed;
     motorsSetSpeed(speed);
@@ -81,8 +81,8 @@ void motorsTurnLeft(int angle, int speed)
 
 void motorsTurnRight(int angle, int speed)
 {
-    PORTAbits.RA6 = 0; // Right motor Direction : ???
-    PORTAbits.RA7 = 1; // Left motor Direction : ???
+    PORTAbits.RA6 = 1; // Right motor Direction : ???
+    PORTAbits.RA7 = 0; // Left motor Direction : ???
 
     motors_counter = (int) ROTATION_TIME_MULTIPLIER * angle / speed;
     motorsSetSpeed(speed);
