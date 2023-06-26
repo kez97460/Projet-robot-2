@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Tue Jun 06 16:20:34 2023
+Linker Map File - Created Thu Jun 15 11:14:29 2023
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -9,69 +9,69 @@ Linker Map File - Created Tue Jun 06 16:20:34 2023
                HighVector       code   0x000008    program   0x000006
                    .cinit    romdata   0x00000e    program   0x000026
          .code_vfprintf.o       code   0x000034    program   0x000c22
-             .code_main.o       code   0x000c56    program   0x00067e
-           .code_motors.o       code   0x0012d4    program   0x000488
-                     PROG       code   0x00175c    program   0x0003ea
-             .code_MI2C.o       code   0x001b46    program   0x0003e4
-             .stringtable    romdata   0x001f2a    program   0x00013b
-      .idata_vfprintf.o_i    romdata   0x002065    program   0x000000
-      .idata_i2c_eeap.o_i    romdata   0x002065    program   0x000000
-      .romdata_i2c_eeap.o    romdata   0x002065    program   0x000000
-      .idata_i2c_eerr.o_i    romdata   0x002065    program   0x000000
-      .romdata_i2c_eerr.o    romdata   0x002065    program   0x000000
-      .idata_fxd3232u.o_i    romdata   0x002065    program   0x000000
-        .romdata_stdout.o    romdata   0x002065    program   0x000000
-        .romdata_printf.o    romdata   0x002065    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x002065    program   0x000000
-      .idata_i2c_writ.o_i    romdata   0x002065    program   0x000000
-      .romdata_i2c_writ.o    romdata   0x002065    program   0x000000
-        .idata___init.o_i    romdata   0x002065    program   0x000000
-        .romdata___init.o    romdata   0x002065    program   0x000000
-        .idata_printf.o_i    romdata   0x002065    program   0x000000
-         .idata_c018i.o_i    romdata   0x002065    program   0x000000
-          .romdata_main.o    romdata   0x002065    program   0x000000
-         .romdata_c018i.o    romdata   0x002065    program   0x000000
-             .code_init.o       code   0x002066    program   0x00012e
-           .code_stdout.o       code   0x002066    program   0x000000
-         .code_i2c_eerr.o       code   0x002194    program   0x0000e4
-               _cinit_scn       code   0x002278    program   0x00009e
-         .code_i2c_eebw.o       code   0x002316    program   0x00009a
-           .code_printf.o       code   0x0023b0    program   0x000098
-             .code_putc.o       code   0x002448    program   0x000084
-         .code_i2c_eeap.o       code   0x0024cc    program   0x000084
-         .code_i2c_writ.o       code   0x002550    program   0x000072
-          .code_fxm3232.o       code   0x0025c2    program   0x000070
-                   STRING       code   0x002632    program   0x000066
-         .code_fxd3232u.o       code   0x002698    program   0x000048
-         .code_fxd1616u.o       code   0x0026e0    program   0x00002c
-                    CTYPE       code   0x00270c    program   0x000024
-                    .code       code   0x002730    program   0x000020
-             _startup_scn       code   0x002750    program   0x00001c
-                    STDIO       code   0x00276c    program   0x00001c
-      .romdata_vfprintf.o    romdata   0x002788    program   0x000011
-        .romdata_motors.o    romdata   0x002799    program   0x000000
-        .idata_motors.o_i    romdata   0x002799    program   0x000000
-    .romdata__user_putc.o    romdata   0x002799    program   0x000000
-    .idata__user_putc.o_i    romdata   0x002799    program   0x000000
-      .idata_i2c_eebw.o_i    romdata   0x002799    program   0x000000
-          .romdata_putc.o    romdata   0x002799    program   0x000000
-          .idata_putc.o_i    romdata   0x002799    program   0x000000
-      .romdata_i2c_eebw.o    romdata   0x002799    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x002799    program   0x000000
-       .romdata_fxm3232.o    romdata   0x002799    program   0x000000
-      .idata_i2c_idle.o_i    romdata   0x002799    program   0x000000
-      .romdata_i2c_idle.o    romdata   0x002799    program   0x000000
-          .romdata_MI2C.o    romdata   0x002799    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x002799    program   0x000000
-          .idata_MI2C.o_i    romdata   0x002799    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x002799    program   0x000000
-          .romdata_init.o    romdata   0x002799    program   0x000000
-            .code_c018i.o       code   0x00279a    program   0x000000
-         .code_i2c_idle.o       code   0x00279a    program   0x00000e
-           .code___init.o       code   0x0027a8    program   0x000002
-        .idata_stdout.o_i    romdata   0x0027aa    program   0x000002
-          .idata_main.o_i    romdata   0x0027ac    program   0x000016
-          .idata_init.o_i    romdata   0x0027c2    program   0x000006
+             .code_main.o       code   0x000c56    program   0x000626
+           .code_motors.o       code   0x00127c    program   0x000488
+                     PROG       code   0x001704    program   0x0003ea
+             .code_MI2C.o       code   0x001aee    program   0x0003e4
+             .stringtable    romdata   0x001ed2    program   0x000138
+             .code_init.o       code   0x00200a    program   0x00012e
+         .code_i2c_eerr.o       code   0x002138    program   0x0000e4
+               _cinit_scn       code   0x00221c    program   0x00009e
+         .code_i2c_eebw.o       code   0x0022ba    program   0x00009a
+           .code_printf.o       code   0x002354    program   0x000098
+             .code_putc.o       code   0x0023ec    program   0x000084
+         .code_i2c_eeap.o       code   0x002470    program   0x000084
+         .code_i2c_writ.o       code   0x0024f4    program   0x000072
+          .code_fxm3232.o       code   0x002566    program   0x000070
+                   STRING       code   0x0025d6    program   0x000066
+         .code_fxd3232u.o       code   0x00263c    program   0x000048
+         .code_fxd1616u.o       code   0x002684    program   0x00002c
+                    CTYPE       code   0x0026b0    program   0x000024
+                    .code       code   0x0026d4    program   0x000020
+             _startup_scn       code   0x0026f4    program   0x00001c
+                    STDIO       code   0x002710    program   0x00001c
+      .romdata_vfprintf.o    romdata   0x00272c    program   0x000011
+      .romdata_i2c_idle.o    romdata   0x00273d    program   0x000000
+      .idata_i2c_idle.o_i    romdata   0x00273d    program   0x000000
+      .idata_i2c_writ.o_i    romdata   0x00273d    program   0x000000
+       .romdata_fxm3232.o    romdata   0x00273d    program   0x000000
+      .romdata_i2c_writ.o    romdata   0x00273d    program   0x000000
+        .idata___init.o_i    romdata   0x00273d    program   0x000000
+        .romdata___init.o    romdata   0x00273d    program   0x000000
+        .idata_printf.o_i    romdata   0x00273d    program   0x000000
+        .romdata_printf.o    romdata   0x00273d    program   0x000000
+        .romdata_stdout.o    romdata   0x00273d    program   0x000000
+      .idata_vfprintf.o_i    romdata   0x00273d    program   0x000000
+          .idata_putc.o_i    romdata   0x00273d    program   0x000000
+          .romdata_putc.o    romdata   0x00273d    program   0x000000
+    .idata__user_putc.o_i    romdata   0x00273d    program   0x000000
+    .romdata__user_putc.o    romdata   0x00273d    program   0x000000
+         .idata_c018i.o_i    romdata   0x00273d    program   0x000000
+         .romdata_c018i.o    romdata   0x00273d    program   0x000000
+          .romdata_init.o    romdata   0x00273d    program   0x000000
+          .idata_MI2C.o_i    romdata   0x00273d    program   0x000000
+          .romdata_MI2C.o    romdata   0x00273d    program   0x000000
+          .romdata_main.o    romdata   0x00273d    program   0x000000
+        .idata_motors.o_i    romdata   0x00273d    program   0x000000
+        .romdata_motors.o    romdata   0x00273d    program   0x000000
+      .idata_i2c_eeap.o_i    romdata   0x00273d    program   0x000000
+      .romdata_i2c_eeap.o    romdata   0x00273d    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x00273d    program   0x000000
+      .idata_i2c_eebw.o_i    romdata   0x00273d    program   0x000000
+      .romdata_i2c_eebw.o    romdata   0x00273d    program   0x000000
+      .idata_i2c_eerr.o_i    romdata   0x00273d    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x00273d    program   0x000000
+      .romdata_i2c_eerr.o    romdata   0x00273d    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x00273d    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x00273d    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x00273d    program   0x000000
+           .code_stdout.o       code   0x00273e    program   0x000000
+            .code_c018i.o       code   0x00273e    program   0x000000
+         .code_i2c_idle.o       code   0x00273e    program   0x00000e
+           .code___init.o       code   0x00274c    program   0x000002
+        .idata_stdout.o_i    romdata   0x00274e    program   0x000002
+          .idata_main.o_i    romdata   0x002750    program   0x000016
+          .idata_init.o_i    romdata   0x002766    program   0x000006
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
@@ -125,83 +125,82 @@ Linker Map File - Created Tue Jun 06 16:20:34 2023
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x002064      
-                            0x002066    0x002798      
-                            0x00279a    0x0027c7      
+                            0x000000    0x00273c      
+                            0x00273e    0x00276b      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300005    0x300006      
-            10186 out of 33048 program addresses used, program memory utilization is 30%
+            10095 out of 33048 program addresses used, program memory utilization is 30%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D1616S   0x001882    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x001890    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00188c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x0018a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D3232S   0x0018dc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                D3232SNEG   0x0018ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                 D3232SOK   0x0018e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  D3232SX   0x00190a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  DA1616S   0x001872    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA3232S   0x0018c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-              Detecte_i2c   0x001b56    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-             EEAckPolling   0x0024cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-              EEByteWrite   0x002316    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-             EERandomRead   0x002194    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-       Ecrire_i2c_Telecom   0x001d7a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-                 FLO1632S   0x001760    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                 FLO1632U   0x00175c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    FPM32   0x001786    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 FXD1616S   0x001860    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0026e0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                 FXD3232S   0x0018ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                 FXD3232U   0x002698    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                 FXM1616S   0x001914    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                  FXM3232   0x0025c2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+                   D1616S   0x00182a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x001838    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x001834    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x00184a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D3232S   0x001884    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x001892    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x00188e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x0018b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  DA1616S   0x00181a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA3232S   0x00186e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+              Detecte_i2c   0x001afe    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+             EEAckPolling   0x002470    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+              EEByteWrite   0x0022ba    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+             EERandomRead   0x002138    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+       Ecrire_i2c_Telecom   0x001d22    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+                 FLO1632S   0x001708    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                 FLO1632U   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    FPM32   0x00172e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 FXD1616S   0x001808    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x002684    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD3232S   0x001854    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 FXD3232U   0x00263c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                 FXM1616S   0x0018bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                  FXM3232   0x002566    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
                   HighISR   0x000c56    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-                  INT3216   0x00196e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  INT3232   0x0019cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  IdleI2C   0x00279a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+                  INT3216   0x001916    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  INT3232   0x001974    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  IdleI2C   0x00273e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
             IntHighVector   0x000008    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-         Lire_i2c_Telecom   0x001e18    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-                 MI2CInit   0x001b46    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-               SONAR_Read   0x001b9c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-              SONAR_Write   0x001cdc    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-               TSIGN1616A   0x001960    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                 WriteI2C   0x002550    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
-            Write_PCF8574   0x001ec4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-                   _2jEnd   0x002682    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                 __FpExit   0x001a46    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpPack   0x001a72    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-            __FpReturnNaN   0x001a3a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x001a4c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x001a64    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x001a52    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x001a6c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x001a48    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x001a60    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpReturnW   0x001aca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpUnPackA   0x001aea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x001b1a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+         Lire_i2c_Telecom   0x001dc0    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+                 MI2CInit   0x001aee    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+               SONAR_Read   0x001b44    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+              SONAR_Write   0x001c84    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+               TSIGN1616A   0x001908    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                 WriteI2C   0x0024f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+            Write_PCF8574   0x001e6c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+                   _2jEnd   0x002626    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                 __FpExit   0x0019ee    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x001a1a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+            __FpReturnNaN   0x0019e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x0019f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x001a0c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x0019fa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x001a14    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x0019f0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x001a08    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x001a72    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x001a92    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x001ac2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00000   0x00270a    program     static                          
-       ___return_lbl00000   0x0026de    program     static                          
-       ___return_lbl00000   0x002630    program     static                          
+       ___return_lbl00000   0x0026ae    program     static                          
+       ___return_lbl00000   0x002682    program     static                          
+       ___return_lbl00000   0x0025d4    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x00276a    program     static                          
-       ___return_lbl00002   0x002314    program     static                          
+       ___return_lbl00001   0x00270e    program     static                          
+       ___return_lbl00002   0x0022b8    program     static                          
                __config_0   0x300001    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
                __config_1   0x300003    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
                __config_2   0x300005    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
                __config_3   0x300006    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-                   __init   0x0027a8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                   __pa_0   0x00226a    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                   __pa_0   0x0023a2    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x002540    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                   __init   0x00274c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                   __pa_0   0x00220e    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+                   __pa_0   0x002346    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x0024e4    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
                    __pa_0   0x000974    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_1   0x00097c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                   __pa_10   0x000a30    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
@@ -249,114 +248,114 @@ Linker Map File - Created Tue Jun 06 16:20:34 2023
                    __pa_7   0x0009e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_8   0x0009ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_9   0x000a10    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-               __string_0   0x001f2a    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               __string_0   0x002054    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               __string_0   0x00201d    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_1   0x002044    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               __string_1   0x00200a    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_2   0x001fe5    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_2   0x002033    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               __string_3   0x001fe0    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_4   0x001fcf    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_5   0x001fb9    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_6   0x001f80    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_7   0x001f63    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_8   0x001f3e    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_0   0x001ed2    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               __string_0   0x001ff9    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               __string_0   0x001fb6    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_1   0x001fe9    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               __string_1   0x001fa0    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_2   0x001f8d    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_2   0x001fd8    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               __string_3   0x001f68    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_4   0x001f63    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_5   0x001f52    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_6   0x001f3c    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_7   0x001f03    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_8   0x001ee6    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
               __tmplbl_42   0x000b0a    program     static                          
               __tmplbl_43   0x000952    program     static                          
               __tmplbl_44   0x000938    program     static                          
               __tmplbl_85   0x00008a    program     static                          
-            __zero_memory   0x002730    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                _do_cinit   0x002278    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            __zero_memory   0x0026d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                _do_cinit   0x00221c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x0026da    program     static                          
-                 _startup   0x002750    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-              _usart_putc   0x00276c    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                   _false   0x00267e    program     static                          
+                 _startup   0x0026f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+              _usart_putc   0x002710    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
                _user_putc   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
-                compare_l   0x002746    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                copy_loop   0x0022ea    program     static                          
-            copy_one_byte   0x0022f0    program     static                          
-                     done   0x002314    program     static                          
-             done_copying   0x0022fe    program     static                          
-                  endloop   0x002706    program     static                          
-                initClock   0x002066    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-                  initI2c   0x00216c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-           initInterrupts   0x0020e6    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               initMotors   0x00209a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               initSerial   0x002130    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-          initSurvBattery   0x0020f8    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               initTimer0   0x00207e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-                  isdigit   0x00270c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                 jANotInf   0x0017a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-              jBothFinite   0x0017b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-             jBothNotZero   0x0017be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                     jEnd   0x00264c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                     jEnd   0x002684    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jExit   0x0019ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jExit   0x001a38    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                jHaveZero   0x0017ba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                jI2F16Beg   0x001770    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    jLoop   0x0019aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jLoop   0x001a0c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                    jLoop   0x002642    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                    jLoop   0x00266c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                jLoopExit   0x0019ba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                jLoopExit   0x001a20    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                   jMatch   0x00272c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                     jMax   0x00197e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                     jMax   0x0019dc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jMaxNeg   0x00198c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x0019ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jMaxPos   0x001982    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxPos   0x0019e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                 jNoMatch   0x00272e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                  jNotInf   0x00199a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jNotInf   0x0019fa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jPkLoop   0x001a80    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkRoundDone   0x001aca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jPkRoundIt   0x001ab2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkShiftDone   0x001a9c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x001a56    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                  jUnpkA1   0x001af4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x001b0c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x001b02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x001b24    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x001b3c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x001b32    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x001b16    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                   jWr123   0x0019e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jWrZ123   0x0019f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                    jZero   0x001994    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jZero   0x0019f4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-               jZero1and2   0x001a5a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                     loop   0x00277c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-                     loop   0x002760    program     static                          
-                     loop   0x0026a6    program     static                          
-                     loop   0x0026ea    program     static                          
-                   loop_h   0x00273e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_l   0x002748    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                compare_l   0x0026ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                copy_loop   0x00228e    program     static                          
+            copy_one_byte   0x002294    program     static                          
+                     done   0x0022b8    program     static                          
+             done_copying   0x0022a2    program     static                          
+                  endloop   0x0026aa    program     static                          
+                initClock   0x00200a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+                  initI2c   0x002110    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+           initInterrupts   0x00208a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               initMotors   0x00203e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               initSerial   0x0020d4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+          initSurvBattery   0x00209c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               initTimer0   0x002022    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+                  isdigit   0x0026b0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 jANotInf   0x00174c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+              jBothFinite   0x00175a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+             jBothNotZero   0x001766    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                     jEnd   0x0025f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x002628    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jExit   0x001972    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jExit   0x0019e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                jHaveZero   0x001762    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                jI2F16Beg   0x001718    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    jLoop   0x001952    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jLoop   0x0019b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                    jLoop   0x0025e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x002610    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                jLoopExit   0x001962    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jLoopExit   0x0019c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                   jMatch   0x0026d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                     jMax   0x001926    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     jMax   0x001984    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jMaxNeg   0x001934    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x001996    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jMaxPos   0x00192a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x001988    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                 jNoMatch   0x0026d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                  jNotInf   0x001942    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jNotInf   0x0019a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jPkLoop   0x001a28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x001a72    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x001a5a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x001a44    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x0019fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                  jUnpkA1   0x001a9c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x001ab4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x001aaa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x001acc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x001ae4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x001ada    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x001abe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                   jWr123   0x00198e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jWrZ123   0x00199e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                    jZero   0x00193c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jZero   0x00199c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+               jZero1and2   0x001a02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                     loop   0x002720    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                     loop   0x002704    program     static                          
+                     loop   0x00264a    program     static                          
+                     loop   0x00268e    program     static                          
+                   loop_h   0x0026e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_l   0x0026ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      main   0x000e0a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-            motorsForward   0x00150e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-           motorsSetSpeed   0x0013ba    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               motorsStop   0x0012d4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               motorsTest   0x001460    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-           motorsTurnLeft   0x0015a4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-          motorsTurnRight   0x001680    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-                   printf   0x0023b0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
-                     putc   0x002448    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-              resetTimer0   0x00206e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-                 s_digits   0x002788    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+            motorsForward   0x0014b6    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+           motorsSetSpeed   0x001362    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               motorsStop   0x00127c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               motorsTest   0x001408    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+           motorsTurnLeft   0x00154c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+          motorsTurnRight   0x001628    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+                   printf   0x002354    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
+                     putc   0x0023ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+              resetTimer0   0x002012    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+                 s_digits   0x00272c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
             s_put_n_chars   0x000034    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-             setDutyCycle   0x0012f4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-                    sleep   0x001024    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-             sonarMeasure   0x00107c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-                   strlen   0x002632    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x00264e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-              survBattery   0x0010fc    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-                     test   0x002292    program     static                          
+             setDutyCycle   0x00129c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+                    sleep   0x001042    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+             sonarMeasure   0x00109a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+                   strlen   0x0025d6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x0025f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+              survBattery   0x00111a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+                     test   0x002236    program     static                          
                  vfprintf   0x000060    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-      waitForSonarMeasure   0x001160    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               zero_block   0x00273e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+      waitForSonarMeasure   0x00117e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               zero_block   0x0026e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -655,161 +654,161 @@ Linker Map File - Created Tue Jun 06 16:20:34 2023
                   __pa_46   0x000c4c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                   HighISR   0x000c56    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
                      main   0x000e0a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-                    sleep   0x001024    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-             sonarMeasure   0x00107c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-              survBattery   0x0010fc    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-      waitForSonarMeasure   0x001160    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               motorsStop   0x0012d4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-             setDutyCycle   0x0012f4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-           motorsSetSpeed   0x0013ba    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               motorsTest   0x001460    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-            motorsForward   0x00150e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-           motorsTurnLeft   0x0015a4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-          motorsTurnRight   0x001680    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-                 FLO1632U   0x00175c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                 FLO1632S   0x001760    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                jI2F16Beg   0x001770    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    FPM32   0x001786    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 jANotInf   0x0017a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-              jBothFinite   0x0017b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                jHaveZero   0x0017ba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-             jBothNotZero   0x0017be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 FXD1616S   0x001860    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x001872    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x001882    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00188c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x001890    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x0018a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD3232S   0x0018ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  DA3232S   0x0018c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                   D3232S   0x0018dc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                 D3232SOK   0x0018e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                D3232SNEG   0x0018ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                  D3232SX   0x00190a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
-                 FXM1616S   0x001914    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-               TSIGN1616A   0x001960    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                  INT3216   0x00196e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                     jMax   0x00197e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxPos   0x001982    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x00198c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jZero   0x001994    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jNotInf   0x00199a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jLoop   0x0019aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                jLoopExit   0x0019ba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jExit   0x0019ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  INT3232   0x0019cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                     jMax   0x0019dc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jMaxPos   0x0019e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                   jWr123   0x0019e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jMaxNeg   0x0019ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                    jZero   0x0019f4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jWrZ123   0x0019f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                  jNotInf   0x0019fa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                    jLoop   0x001a0c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                jLoopExit   0x001a20    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-                    jExit   0x001a38    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
-            __FpReturnNaN   0x001a3a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpExit   0x001a46    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x001a48    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x001a4c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x001a52    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x001a56    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jZero1and2   0x001a5a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x001a60    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x001a64    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x001a6c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpPack   0x001a72    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                  jPkLoop   0x001a80    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkShiftDone   0x001a9c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jPkRoundIt   0x001ab2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpReturnW   0x001aca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkRoundDone   0x001aca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpUnPackA   0x001aea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA1   0x001af4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x001b02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x001b0c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x001b16    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x001b1a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x001b24    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x001b32    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x001b3c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 MI2CInit   0x001b46    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-              Detecte_i2c   0x001b56    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-               SONAR_Read   0x001b9c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-              SONAR_Write   0x001cdc    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-       Ecrire_i2c_Telecom   0x001d7a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-         Lire_i2c_Telecom   0x001e18    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-            Write_PCF8574   0x001ec4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
-               __string_0   0x001f2a    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               __string_8   0x001f3e    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_7   0x001f63    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_6   0x001f80    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_5   0x001fb9    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_4   0x001fcf    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_3   0x001fe0    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_2   0x001fe5    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_1   0x00200a    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_0   0x00201d    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
-               __string_2   0x002033    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               __string_1   0x002044    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-               __string_0   0x002054    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
-                initClock   0x002066    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-              resetTimer0   0x00206e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               initTimer0   0x00207e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               initMotors   0x00209a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-           initInterrupts   0x0020e6    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-          initSurvBattery   0x0020f8    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-               initSerial   0x002130    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-                  initI2c   0x00216c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
-             EERandomRead   0x002194    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                   __pa_0   0x00226a    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                _do_cinit   0x002278    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x002292    program     static                          
-                copy_loop   0x0022ea    program     static                          
-            copy_one_byte   0x0022f0    program     static                          
-             done_copying   0x0022fe    program     static                          
-       ___return_lbl00002   0x002314    program     static                          
-                     done   0x002314    program     static                          
-              EEByteWrite   0x002316    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x0023a2    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   printf   0x0023b0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
-                     putc   0x002448    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-             EEAckPolling   0x0024cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                   __pa_0   0x002540    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                 WriteI2C   0x002550    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
-                  FXM3232   0x0025c2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x002630    program     static                          
-                   strlen   0x002632    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                    jLoop   0x002642    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                     jEnd   0x00264c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x00264e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x00266c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                   _2jEnd   0x002682    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x002684    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                 FXD3232U   0x002698    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x0026a6    program     static                          
-                   _false   0x0026da    program     static                          
-       ___return_lbl00000   0x0026de    program     static                          
-                 FXD1616U   0x0026e0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x0026ea    program     static                          
-                  endloop   0x002706    program     static                          
-       ___return_lbl00000   0x00270a    program     static                          
-                  isdigit   0x00270c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                   jMatch   0x00272c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                 jNoMatch   0x00272e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-            __zero_memory   0x002730    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-               zero_block   0x00273e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_h   0x00273e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                compare_l   0x002746    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_l   0x002748    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                 _startup   0x002750    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x002760    program     static                          
-       ___return_lbl00001   0x00276a    program     static                          
-              _usart_putc   0x00276c    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-                     loop   0x00277c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-                 s_digits   0x002788    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-                  IdleI2C   0x00279a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
-                   __init   0x0027a8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                    sleep   0x001042    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+             sonarMeasure   0x00109a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+              survBattery   0x00111a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+      waitForSonarMeasure   0x00117e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               motorsStop   0x00127c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+             setDutyCycle   0x00129c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+           motorsSetSpeed   0x001362    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               motorsTest   0x001408    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+            motorsForward   0x0014b6    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+           motorsTurnLeft   0x00154c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+          motorsTurnRight   0x001628    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+                 FLO1632U   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                 FLO1632S   0x001708    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                jI2F16Beg   0x001718    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    FPM32   0x00172e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 jANotInf   0x00174c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+              jBothFinite   0x00175a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                jHaveZero   0x001762    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+             jBothNotZero   0x001766    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 FXD1616S   0x001808    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x00181a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x00182a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x001834    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x001838    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x00184a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD3232S   0x001854    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  DA3232S   0x00186e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                   D3232S   0x001884    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x00188e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x001892    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x0018b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 FXM1616S   0x0018bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x001908    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                  INT3216   0x001916    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     jMax   0x001926    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x00192a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x001934    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jZero   0x00193c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jNotInf   0x001942    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jLoop   0x001952    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jLoopExit   0x001962    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jExit   0x001972    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  INT3232   0x001974    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                     jMax   0x001984    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jMaxPos   0x001988    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                   jWr123   0x00198e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jMaxNeg   0x001996    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                    jZero   0x00199c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jWrZ123   0x00199e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                  jNotInf   0x0019a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                    jLoop   0x0019b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                jLoopExit   0x0019c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+                    jExit   0x0019e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP32.asm
+            __FpReturnNaN   0x0019e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpExit   0x0019ee    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x0019f0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x0019f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x0019fa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x0019fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jZero1and2   0x001a02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x001a08    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x001a0c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x001a14    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x001a1a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                  jPkLoop   0x001a28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x001a44    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x001a5a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x001a72    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x001a72    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x001a92    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA1   0x001a9c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x001aaa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x001ab4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x001abe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x001ac2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x001acc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x001ada    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x001ae4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 MI2CInit   0x001aee    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+              Detecte_i2c   0x001afe    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+               SONAR_Read   0x001b44    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+              SONAR_Write   0x001c84    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+       Ecrire_i2c_Telecom   0x001d22    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+         Lire_i2c_Telecom   0x001dc0    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+            Write_PCF8574   0x001e6c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\MI2C.c
+               __string_0   0x001ed2    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               __string_8   0x001ee6    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_7   0x001f03    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_6   0x001f3c    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_5   0x001f52    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_4   0x001f63    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_3   0x001f68    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_2   0x001f8d    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_1   0x001fa0    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_0   0x001fb6    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
+               __string_2   0x001fd8    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               __string_1   0x001fe9    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+               __string_0   0x001ff9    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\motors.c
+                initClock   0x00200a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+              resetTimer0   0x002012    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               initTimer0   0x002022    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               initMotors   0x00203e    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+           initInterrupts   0x00208a    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+          initSurvBattery   0x00209c    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+               initSerial   0x0020d4    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+                  initI2c   0x002110    program     extern D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\init.c
+             EERandomRead   0x002138    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+                   __pa_0   0x00220e    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+                _do_cinit   0x00221c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x002236    program     static                          
+                copy_loop   0x00228e    program     static                          
+            copy_one_byte   0x002294    program     static                          
+             done_copying   0x0022a2    program     static                          
+       ___return_lbl00002   0x0022b8    program     static                          
+                     done   0x0022b8    program     static                          
+              EEByteWrite   0x0022ba    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x002346    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   printf   0x002354    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
+                     putc   0x0023ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+             EEAckPolling   0x002470    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                   __pa_0   0x0024e4    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                 WriteI2C   0x0024f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+                  FXM3232   0x002566    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0025d4    program     static                          
+                   strlen   0x0025d6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x0025e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x0025f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x0025f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x002610    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x002626    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x002628    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                 FXD3232U   0x00263c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x00264a    program     static                          
+                   _false   0x00267e    program     static                          
+       ___return_lbl00000   0x002682    program     static                          
+                 FXD1616U   0x002684    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x00268e    program     static                          
+                  endloop   0x0026aa    program     static                          
+       ___return_lbl00000   0x0026ae    program     static                          
+                  isdigit   0x0026b0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                   jMatch   0x0026d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x0026d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+            __zero_memory   0x0026d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+               zero_block   0x0026e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_h   0x0026e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                compare_l   0x0026ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_l   0x0026ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                 _startup   0x0026f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x002704    program     static                          
+       ___return_lbl00001   0x00270e    program     static                          
+              _usart_putc   0x002710    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                     loop   0x002720    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                 s_digits   0x00272c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  IdleI2C   0x00273e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+                   __init   0x00274c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
                __config_1   0x300003    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c
                __config_2   0x300005    program     static D:\Kezia\Documents\ismin\Projet robot\Projet robot 2\MPLAB_projet\main.c

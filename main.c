@@ -101,21 +101,6 @@ void HighISR(void)
         }
         else if(use_survbat)
             survbat_counter--;
-        
-        // Sonar counter : measures could also be in main for our use case. IN MAIN
-        /*
-        if(sonar_counter)
-            sonar_counter--;
-        else
-        {
-            distance_sonar = SONAR_Read(0xE0,0x02); // 1ere mesure fausse !!!
-            // printf("Distance : %d \r\n", distance); // debug print
-            SONAR_Write(0xE0,0x00);
-            SONAR_Write(0xE0,0x51);
-
-            sonar_counter = 8; // sonar returns a value every ~80ms
-        }
-        */
     } 
     // End of Timer0 interrupt
 }
@@ -143,6 +128,8 @@ void main(void)
     
 
     start = 0;
+    if(use_usart)
+        printf("Finished initialisation phase. \r\n");
     while(!start) // wait for remote control
     {
         if(use_usart)
@@ -152,9 +139,9 @@ void main(void)
 
     // Tests moteurs
     /*
-    motorsTest(20, 500, 1, 1); // pwm(%), time(10*ms), dir_left, dir_right
+    motorsTest(30, 500, 1, 1); // pwm(%), time(10*ms), dir_left, dir_right
     while(motors_counter);
-    motorsTest(20, 500, 0, 0); // pwm(%), time(10*ms), dir_left, dir_right
+    motorsTest(30, 500, 0, 0); // pwm(%), time(10*ms), dir_left, dir_right
     while(motors_counter);
     */
 
@@ -162,69 +149,39 @@ void main(void)
     // Write_PCF8574(0x40, 0b01010111); // 1 : off and 0 : on (for all 8 leds).
 
     // Calibration
-    // motorsForward(100, 30);
-    // while(motors_counter); // On attend la fin du déplacement
-    // sleep(2);
+    /*
+    motorsForward(200, 30);
+    while(motors_counter); // On attend la fin du déplacement
+    sleep(1);
 
-    // motorsTurnRight(90, 20); // Calibration needed for ~90°
-    //while(motors_counter); // On attend la fin du déplacement
-    //sleep(0.5);
+    motorsTurnRight(90, 30); // Calibration needed for ~90°
+    while(motors_counter); // On attend la fin du déplacement
+    sleep(0.5);
 
-    //motorsTurnRight(90, 20); // Calibration needed for ~90°
-    //while(motors_counter); // On attend la fin du déplacement
-    //sleep(2);
+    motorsTurnRight(90, 30); // Calibration needed for ~90°
+    while(motors_counter); // On attend la fin du déplacement
+    sleep(1);
 
-    // motorsForward(100, 30);
-    // while(motors_counter); // On attend la fin du déplacement
-    // sleep(0.5);
+    motorsForward(200, 30);
+    while(motors_counter); // On attend la fin du déplacement
+    sleep(0.5);
+    */
 
     // Actual used code
 
     // Wait for no obstacle(1.5m)
     waitForSonarMeasure(MIN, 150);
 
-    /*safety_sonar = NB_CONSECUTIVE_MEASURES;
-    while(safety_sonar)
-    {
-        distance = sonarMeasure();
-        if(distance > 150)
-            safety_sonar--;
-        else
-            safety_sonar = NB_CONSECUTIVE_MEASURES;
-        if(use_usart)
-            printf("Measure : %d, target : MIN 150 \r\n", distance);
-    }
-    */
-
     motorsForward(-1, 30); // Go forward FOREVER
 
-    waitForSonarMeasure(MAX, 45); // 40cm but I added a buffer to account for the sonar
-    /*
-    safety_sonar = NB_CONSECUTIVE_MEASURES; // nb of consecutive measures needed to stop
-    while(motors_counter && safety_sonar)
-    {
-        distance = sonarMeasure();
-        why = 40;
-        if(distance <= why)
-        {
-            safety_sonar--;
-            if(use_usart) // Debug print
-                printf("Measure : %d, target : MAX %d , DECREASING SAFETY COUNTER \r\n", distance, why);
-        }
-        else
-        {
-            safety_sonar = NB_CONSECUTIVE_MEASURES;
-            if(use_usart) // Debug print
-                printf("Measure : %d, target : MAX %d \r\n", distance, why);
-        }
-    }
-    */
+    waitForSonarMeasure(MAX, 48); // 40cm but I added a buffer to account for the measurement delay
+
     if(use_usart)
         printf("Stopping motors \r\n");
     motorsStop();
     sleep(0.5);
 
-    motorsTurnRight(90, 20); // Calibration needed for ~90°
+    motorsTurnRight(90, 30); // Calibration needed for ~90°
     while(motors_counter); // On attend la fin du déplacement
     sleep(0.5);
 
@@ -299,7 +256,7 @@ void waitForSonarMeasure(int type/* MIN or MAX*/, int limit)
             if(use_usart) // Debug print
                 printf("Measure : %d, target : %d \r\n", distance, limit);
         }
-        if(use_usart) // Debug print
-            printf("Time until motors off : %ld ms \r\n \r\n", motors_counter * 10);
+        // if(use_usart) // Debug print
+            // printf("Time until motors off : %ld ms \r\n \r\n", motors_counter * 10);
     }
 }

@@ -9,17 +9,17 @@
 extern "C" {
 #endif
 
-#define SPEED_MULTIPLIER 1.0 // speed constant multiplier to make speed unit ?? 
-#define FORWARD_TIME_MULTIPLIER 120 // motorsCounter multiplier to make the distance unit ??
-#define ROTATION_TIME_MULTIPLIER 56 // motorsCounter multiplier to make the angle unit "degrees"
+#define SPEED_MULTIPLIER 1.0 // speed constant multiplier
+#define FORWARD_TIME_MULTIPLIER 120 // motorsCounter multiplier to make the distance unit cm
+#define ROTATION_TIME_MULTIPLIER 31 // motorsCounter multiplier to make the angle unit "degrees"
 
 #define DC_ONE_PERCENT 5
 
-#define BATTERY_VALUE_LIMIT 639
+#define BATTERY_VALUE_LIMIT 639 // battery value equivalent to 10V
 
 #define SONAR_DISTANCE_MULTIPLIER 1
 #define MAX_DISTANCE_OBSTACLE 40
-#define NB_CONSECUTIVE_MEASURES 3
+#define NB_CONSECUTIVE_MEASURES 3 // nb of measures needed to do anything
 
 // For waitUntilSonarMeasure in main.c
 #define MIN -1

@@ -81,7 +81,7 @@ void initMotors()
 void initInterrupts()
 {
     /* Interrupts : page 93 */
-    // int0 : interrupt tï¿½lï¿½commande
+    // int0 : interrupt telecommande
     INTCON2bits.INTEDG0 = 0; // Front descendant
     INTCONbits.INT0IE = 1; // Int0 on
 
@@ -97,35 +97,14 @@ void initInterrupts()
 
 void initSurvBattery()
 {
-    /*
-    ADCON1bits.VCFG=0; // inutile configuration par defaut
-    //Choix TAD/
-    ADCON2bits.ADCS=4;
-    //T acquisition/
-    ADCON2bits.ACQT=2;  // Temps acq = 6us > 4.2us
-    // Choix AN2
-    ADCON0bits.CHS=2;
-    // Justification à droite
-    ADCON2bits.ADFM = 1;
-    // Validation ADC (demarage peripherique)
-    ADCON0bits.ADON=1;
-    //Configuration des voies analogiques et digitles
-    ADCON1bits.PCFG=12;//AN0, AN1, AN2 analog, reste digital
-
-    TRISAbits.RA2=1;
-    TRISBbits.RB5=0;
-
-    ADCON0bits.GO = 1; // Start a measure
-    */
-
     TRISBbits.RB5 = 0;
 
     ADCON1bits.VCFG0 = 0; // Vref+ = Vdd
     ADCON1bits.VCFG1 = 0; // Vref- = Vss
     ADCON1bits.PCFG = 0b1100; // Entrées AN0-AN2 en analog
     ADCON0bits.CHS = 0b0010; // Entrée de l'ADC : AN2
-    ADCON2bits.ADCS = 0b100;
-    ADCON2bits.ACQT = 0b010; // Temps acq = 6us > 4.2us
+    ADCON2bits.ADCS = 0b001;
+    ADCON2bits.ACQT = 0b011; // Temps acq = 6us > 4.2us
     ADCON2bits.ADFM = 1; // right justified
     ADCON0bits.ADON = 1; // ADC ON
     
